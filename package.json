@@ -1,0 +1,19 @@
+{
+  "name": "api_recipe",
+  "version": "1.0.0",
+  "description": "food recipe api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Sambhav Jain",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "jsdom": "^16.2.2",
+    "query-selector": "^2.0.0",
+    "request": "^2.88.2"
+  }
+}

@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>List Of Conferences-</h1>
+<%let arr=[]%>
+  <% for(var i=0;i<onebody.length;i++){ arr.push(onebody[i])} %>
+
+
+
+    <% for(var i=0;i<onebody.length;i++){ %>
+      <% for(var j=i+1;j<onebody.length;j++){ %>
+        <% var str1 = "onebody[i].confName" %>
+        <% var str2 = "onebody[j].confName" %>
+        <% var res1 = str1.slice(0, 5) %>
+        <% var res2 = str2.slice(0, 5) %>
+        <% var ser1 = res1%>
+        <%  var ser2 = res2 %>
+        <% if(ser2!==ser1){ %>
+          <%   arr.pop(onebody[j]) %>
+          <% } %>
+        
+       <% } %>
+     <% } %>
+
+  <% for(var i=0;i<onebody.length;i++){ %>
+  <li>
+
+   
+   "<%=arr[i].confName%>" , <%=arr[i].confEndDate%> , <%=arr[i].venue%> , <%=arr[i].entryType%> 
+   <hr>
+  </li>
+  <%}%>
+  
+</body>
+</html>
